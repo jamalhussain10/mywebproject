@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="{% static 'images/img-01.png' %}" alt="IMG">
+			</div>
+
+			<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" id="Text1" name="price" placeholder="Price">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" id="Text2" name="price" placeholder="Price">
+					<span class="shadow-input1"></span>
+				</div>
+			
+			<div class="container-contact1-form-btn">
+					<button onclick="add_number()" class="contact1-form-btn">
+						<span>
+							Add
+							
+						</span>
+					</button>
+				</div>
+				
+				<h1 id = "txtresult"> </h1>
+		
+	</div>
+	
+
+
+<script> function add_number() {
+
+            var first_number = parseInt(document.getElementById("Text1").value);
+            var second_number = parseInt(document.getElementById("Text2").value);
+            var result = first_number + second_number;
+
+            document.getElementById("txtresult").innerHTML = "Answer is : "+result;
+        }
+</script>
+{% endblock content %}
